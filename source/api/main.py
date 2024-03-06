@@ -16,7 +16,7 @@ setattr(sys.modules["__main__"], "CategoricalTransformer", CategoricalTransforme
 setattr(sys.modules["__main__"], "NumericalTransformer", NumericalTransformer)
 
 # Acessa a chave da API do Weights & Biases (wandb) da variável de ambiente
-wandb_api_key = os.environ.get('WANDB_API_KEY')
+wandb_api_key = os.environ.get('WANDB_KEY_ID')
 
 # Inicializa o Weights & Biases (wandb) com a chave da API
 wandb.login(key=wandb_api_key)
