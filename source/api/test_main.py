@@ -16,20 +16,20 @@ def test_root():
 def test_get_inference_low_income():
 
     person = {
-        "age": 72,
-        "workclass": 'Self-emp-inc',
+        "age": 42,
+        "workclass": "Self-emp-inc",
         "fnlwgt": 473748,
-        "education": 'Some-college',
+        "education": "Some-college",
         "education_num": 10,
-        "marital_status": 'Married-civ-spouse',
-        "occupation": 'Exec-managerial',
-        "relationship": 'Husband',
-        "race": 'White',
-        "sex": 'Male',
+        "marital_status": "Married-civ-spouse",
+        "occupation": "Exec-managerial",
+        "relationship": "Husband",
+        "race": "White",
+        "sex": "Male",
         "capital_gain": 0,
         "capital_loss": 0,
         "hours_per_week": 25,
-        "native_country": 'United-States'
+        "native_country": "United-States"
     }
 
     r = client.post("/predict", json=person)
@@ -43,20 +43,20 @@ def test_get_inference_low_income():
 def test_get_inference_high_income():
 
     person = {
-        "age": 46,
-        "workclass": 'Private',
-        "fnlwgt": 364548,
-        "education": 'Bachelors',
-        "education_num": 13,
-        "marital_status": 'Divorced',
-        "occupation": 'Sales',
-        "relationship": 'Not-in-family',
-        "race": 'White',
-        "sex": 'Male',
-        "capital_gain": 8614,
+        "age": 42,
+        "workclass": "Self-emp-inc",
+        "fnlwgt": 473748,
+        "education": "Some-college",
+        "education_num": 20,
+        "marital_status": "Married-civ-spouse",
+        "occupation": "Exec-managerial",
+        "relationship": "Husband",
+        "race": "White",
+        "sex": "Male",
+        "capital_gain": 0,
         "capital_loss": 0,
-        "hours_per_week": 40,
-        "native_country": 'United-States'
+        "hours_per_week": 25,
+        "native_country": "United-States"
     }
 
     r = client.post("/predict", json=person)
