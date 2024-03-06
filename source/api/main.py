@@ -18,6 +18,9 @@ setattr(sys.modules["__main__"], "NumericalTransformer", NumericalTransformer)
 # Acessa a chave da API do Weights & Biases (wandb) da variável de ambiente
 wandb_api_key = os.environ.get('WANDB_API_KEY')
 
+# Inicializa o Weights & Biases (wandb) com a chave da API
+wandb.login(key=wandb_api_key)
+
 # name of the model artifact
 artifact_model_name = "decision_tree/model_export:latest"
 
