@@ -1,5 +1,6 @@
 # from typing import Union
 import sys
+import os
 from pydantic import BaseModel
 from fastapi.responses import HTMLResponse
 from fastapi import FastAPI
@@ -13,6 +14,9 @@ from source.api.pipeline import FeatureSelector, CategoricalTransformer, Numeric
 setattr(sys.modules["__main__"], "FeatureSelector", FeatureSelector)
 setattr(sys.modules["__main__"], "CategoricalTransformer", CategoricalTransformer)
 setattr(sys.modules["__main__"], "NumericalTransformer", NumericalTransformer)
+
+# Acessa a chave da API do Weights & Biases (wandb) da variável de ambiente
+wandb_api_key = os.environ.get('WANDB_API_KEY')
 
 # name of the model artifact
 artifact_model_name = "decision_tree/model_export:latest"
